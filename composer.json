@@ -1,0 +1,34 @@
+{
+    "name": "aphro/protocol",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "azjezz/psl": "^2.5"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^5.11",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "phpunit/phpunit": "^10.1",
+        "friendsofphp/php-cs-fixer": "^3.16"
+    },
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Aphro\\Protocol\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aphro Project",
+            "email": "aphroproject@proton.me"
+        }
+    ],
+    "scripts": {
+        "cs:fix": "@php vendor/bin/php-cs-fixer fix",
+        "cs:check": "@php vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "test": "@php vendor/bin/phpunit",
+        "psalm": "@php vendor/bin/psalm",
+        "phpstan": "@php vendor/bin/phpstan analyse"
+    }
+}
